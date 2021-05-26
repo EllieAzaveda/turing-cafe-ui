@@ -16,4 +16,16 @@ describe('Show main page of Turing Cafe App', () => {
     cy.url().should('eq', 'http://localhost:3000/')
   });
 
+  it('Should display the title, and subtitle of the page upon loading', () => {
+    cy.contains('.app-title', 'Turing Cafe Reservations')
+  });
+
+  it('Should display the form to add a new reservation', () => {
+    cy.get('[data-cy=name]').should('be.visible')
+      .get('[data-cy=date]').should('be.visible')
+      .get('[data-cy=time]').should('be.visible')
+      .get('[data-cy=number]').should('be.visible')
+      .get('[data-cy=submit-button]').should('be.visible')
+  });
+
 });
