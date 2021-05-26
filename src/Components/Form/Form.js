@@ -34,6 +34,7 @@ class Form extends Component {
     return (
       <form>
         <input
+          data-cy='name'
           type='text'
           placeholder='Name'
           name='name'
@@ -42,6 +43,7 @@ class Form extends Component {
         />
 
         <input
+          data-cy='date'
           type='text'
           placeholder='Date (mm/dd)'
           name='date'
@@ -50,6 +52,7 @@ class Form extends Component {
         />
 
         <input
+          data-cy='time'
           type='text'
           placeholder='Time'
           name='time'
@@ -58,6 +61,7 @@ class Form extends Component {
         />
 
         <input
+          data-cy='number'
           type='text'
           placeholder='Number of Guests'
           name='number'
