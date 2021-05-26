@@ -69,7 +69,9 @@ class Form extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-        <button data-cy='submit-button' onClick={event => this.submitReservation(event)}>Make Reservation</button>
+        <button data-cy='submit-button'
+          style={{ color: '#CCCCCC', backgroundColor: '#008080', width: '16%' }}
+          onClick={event => this.submitReservation(event)}>Make Reservation</button>
       </form>
     )
   }
