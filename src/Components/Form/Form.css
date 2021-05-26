@@ -1,0 +1,16 @@
+form {
+  margin: auto;
+}
+
+input, button {
+  margin: 4px;
+  padding: 5px;
+  width: 16%;
+  border: 2px solid #CCCCCC;
+  font-size: 14px;
+  color: #CCCCCC;
+}
+
+.submit-button {
+  background-color: #008080;
+}
