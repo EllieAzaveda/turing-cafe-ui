@@ -16,6 +16,11 @@ class App extends Component {
     this.setState({ reservationData: [...this.state.reservationData, newReservation] })
   }
 
+  deleteReservation = (id) => {
+    const filteredReservations = this.state.reservationData.filter(res => res.id !== id);
+      this.setState({ reservationData: filteredReservations });
+  }
+
   componentDidMount() {
     fetchAllReservations()
       .then(allReservations => {
@@ -32,7 +37,7 @@ class App extends Component {
           <Form addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <ReservationsDisplay reservationData={this.state.reservationData} />
+          <ReservationsDisplay reservationData={this.state.reservationData} deleteReservation={this.deleteReservation} />
         </div>
       </div>
     )
